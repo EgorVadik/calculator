@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Frontend Mentor | Calculator app</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            leagueSpartan: ['League Spartan', 'sans-serif'],
+                        },
+                        colors: {
+                            theme2Main: 'hsl(0, 0%, 90%)',
+                            theme2CalcBg: 'hsl(0, 5%, 81%)',
+                            lightGrayYellow: 'hsl(45, 7%, 89%)',
+                            theme2Equal: 'hsl(25, 98%, 40%)',
+                            theme2Input: '#eeeeee',
+                            theme2DarkBtn: 'hsl(185, 42%, 37%)',
+                            shad: 'hsl(35, 11%, 61%)',
+                            darkGrayBlue: 'hsl(221, 14%, 31%)',
+                        },
+                        fontSize: {
+                            nums: '32px',
+                        },
+                    },
+                },
+            }
+        </script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main
+            class="grid items-center place-content-center min-h-screen font-leagueSpartan font-bold bg-theme2Main"
+        >
+            <div class="mx-5 md:mx-0">
+                <div class="flex">
+                    <h1 class="mr-auto text-[#35352c] text-nums">calc</h1>
+                    <div class="flex text-[#35352c] text-xs items-center">
+                        <p class="pr-6">THEME</p>
+                        <div>
+                            <label for="1" class="px-[4.2px]">1</label>
+                            <label for="2" class="px-[4.2px]">2</label>
+                            <label for="3" class="px-[4.2px]">3</label>
+                            <div
+                                class="bg-theme2CalcBg w-fit h-5 rounded-full relative cursor-pointer px-1 grid grid-cols-3"
+                            >
+                                <input
+                                    type="radio"
+                                    id="1"
+                                    name="theme"
+                                    class="accent-theme2Equal opacity-0 checked:opacity-100"
+                                    onchange="window.location.href='index.html'"
+                                />
+                                <input
+                                    type="radio"
+                                    id="2"
+                                    name="theme"
+                                    class="accent-theme2Equal opacity-0 checked:opacity-100"
+                                    onchange="window.location.href='theme2.html'"
+                                    checked
+                                />
+                                <input
+                                    type="radio"
+                                    id="3"
+                                    name="theme"
+                                    class="accent-theme2Equal opacity-0 checked:opacity-100"
+                                    onchange="window.location.href='theme3.html'"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p
+                        id="input"
+                        class="w-full py-4 my-6 text-nums text-right px-3 text-[#35352c] bg-theme2Input rounded-lg"
+                    >
+                        0
+                    </p>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-4 text-nums gap-3 p-5 bg-theme2CalcBg rounded-lg mx-5 md:mx-0 text-darkGrayBlue"
+            >
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    7
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    8
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    9
+                </button>
+                <button
+                    class="bg-theme2DarkBtn rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-[#63b5bc] btn text-white text-xl"
+                >
+                    DEL
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    4
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    5
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    6
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    +
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    1
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    2
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    3
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    -
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    .
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    0
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    /
+                </button>
+                <button
+                    class="bg-lightGrayYellow rounded-lg px-0 md:px-5 shadow-md shadow-shad hover:bg-white btn"
+                >
+                    x
+                </button>
+                <button
+                    class="bg-theme2DarkBtn rounded-lg px-0 md:px-5 shadow-md shadow-shad btn col-span-2 text-white hover:bg-[#63b5bc]"
+                >
+                    RESET
+                </button>
+                <button
+                    class="bg-theme2Equal rounded-lg px-0 md:px-5 shadow-md shadow-shad btn col-span-2 text-white hover:bg-[#fe8b43]"
+                >
+                    =
+                </button>
+            </div>
+        </main>
+    </body>
+</html>
